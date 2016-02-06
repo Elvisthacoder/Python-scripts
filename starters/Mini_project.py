@@ -3,14 +3,15 @@ Created on Feb 3, 2016
 
 @author: taifa
 '''
+import enchant 
+d = enchant.Dict("en_US")
 def valid_user_input(x):
     try:
-        return int(x) > 2
+        return d.check(x)
     except ValueError:
-        return False
+        return d.suggest(x)
+sentence_input = input("Enter sentence: ")
 
-maximum_number_input = input("Maximum Number: ")
-
-while valid_user_input(maximum_number_input):
-    maximum_number_input = input("Maximum Number: ")
-    print("You have successfully entered a valid number")
+while valid_user_input(sentence_input):
+    print("You have successfully entered a sentence/word")
+    
