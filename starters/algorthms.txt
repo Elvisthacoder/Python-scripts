@@ -1,0 +1,5 @@
+How do you get your function to find the lines in the text file where the word occurs and print the corresponding line numbers?
+
+I had to open a text file with the paragraph and then am supposed to search the paragraph for certain words and then print the specific line numbers for the words.
+
+
